@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <section class="section scroll-spy">
+        <div class="container">
+            <h2>안녕하세요 신입 디자이너 우수지 입니다</h2>
+        </div>
+    </section>
+    <section class="section scroll-spy">
+        <div class="container">
+            <h1>My Profile</h1>
+            <div class="box back-to-position to-right delay-0">
+                <img src="img/IMG_3671.JPG" alt="" width="500px">
+            </div>
+            <div class="box back-to-position to-left delay-1">
+                <p>이름: 우수지</p>
+                <p>2004.06.26</p>
+                <p>010-5586-4257</p>
+                <p>sujiqkrk@gmail.com</p>
+                <p>학력</p>
+                <p>덕현고등학교 졸업</p>
+                <p>한국폴리텍 정수캠퍼스 시각디자인과 졸업예정</p>
+            </div>
+        </div>
+    </section>
+    <section class="section scroll-spy">
+        <div class="container">
+            <h1>Skills</h1>
+            <div class="box back-to-position to-right delay-0">
+                <div class="img_box">
+                    <img src="img/Adobe_Illustrator_CC_icon.svg.png" alt="" width="100px">
+                    <img src="img/skQ1Z0FtH_GpW136xD6eCuUcP9P0fTsSEMbiK5rEn27jplAF7xGde8V4iLq91BGv4XElHbPiTY1HKA0rcAbGkCIMYFBePZE5FS4HhDxgcE5SkEl0_sA4PXTDE3Tv90Qj8K325lx9exyHaks4_0Cd9A.svg" alt="" width="100px">
+                <img src="img/aa5Ofg_q1jpmUsxyXYAD1f6W5hfLIroPlsfAeTmSHW7nmlFTEE94JdZCDiFooI-I8WjCGyv9x25wrXa1Bf4osBUUxkVL1OgNy-tKgyhCA1UEjHOgXrd-0GQwcQCGP31ULX_eZmINeN6nS-vt9RBJfw.webp" alt="" width="100px">
+                </div>
+            </div>
+            <div class="box back-to-position to-left delay-1">
+                <div class="gage">
+                    <progress value="50" max="100"></progress>
+                    <progress value="60" max="100"></progress>
+                    <progress value="40" max="100"></progress>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const spyEls = document.querySelectorAll('section.scroll-spy');
+        const controller = new ScrollMagic.Controller();
+
+        spyEls.forEach(function (spyEl){
+            new ScrollMagic.Scene({triggerElement: spyEl})
+            .setClassToggle(spyEl, 'show')
+            .addTo(controller)
+        })
+    </script>
+</body>
+</html>
